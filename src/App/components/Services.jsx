@@ -1,17 +1,20 @@
 import { Icon } from "@iconify/react";
 
-const Service = (props) => {
+const Service = ({ draft, icon, name, text }) => {
   return (
     <div class="flex flex-col items-center space-y-3 rounded-xl bg-gray-100 p-6 text-center dark:bg-gray-800">
       <span class="inline-block rounded-full bg-blue-100 p-3 text-blue-500 dark:bg-blue-500 dark:text-white">
-        <Icon icon={props.icon} width="24px" height="24px" />
+        <Icon icon={icon} width="24px" height="24px" />
       </span>
       <h1 class="text-2xl font-semibold capitalize text-gray-700 dark:text-white">
-        {props.name}
+        {name}
       </h1>
-      <p class="text-gray-500 dark:text-gray-300">{props.text}</p>
-      <button class="rounded-lg bg-blue-600 px-6 py-2.5 text-center font-medium capitalize leading-5 text-white hover:bg-blue-500 lg:mt-0 lg:w-auto">
-        Contact Us
+      <p class="text-gray-500 dark:text-gray-300">{text}</p>
+      <button
+        disabled={draft}
+        class="disabled: rounded-lg bg-blue-600 px-6 py-2.5 text-center font-medium capitalize leading-5 text-white hover:bg-blue-500 disabled:cursor-not-allowed disabled:bg-gray-600 disabled:hover:bg-gray-600 lg:mt-0 lg:w-auto"
+      >
+        {draft ? "Coming soon" : "Contact Us"}
       </button>
     </div>
   );
@@ -28,43 +31,57 @@ const Services = () => {
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:mt-12 xl:grid-cols-3 xl:gap-16">
             <Service
               name="Hosting AMA Session"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+              text="Crypto AMA is a session where crypto enthusiasts meet to discuss the latest crypto projects in a live session or a pre-planned AMA session."
               icon="heroicons-outline:speakerphone"
+              draft={false}
             />
             <Service
               name="Live Webinar"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+              text="We can arrange live webinar with our Subscriber for your project you can do it in both telegram community members or Twitter community members."
               icon="fluent:live-24-filled"
+              draft={false}
             />
             <Service
               name="Airdrop and Giveaway Promotions"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+              text="We can help you to build your  project audience by doing giveaway tasks and we can help you to promote your Airdrop."
               icon="game-icons:water-drop"
+              draft={false}
             />
             <Service
               name="Launch Pad Listing"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+              text="Get your token listed on top centralized exchanges. Boost the trading volume, the number of holders, and the project's exposure. Also, we are good friends with many Launchpads and invested in many of them. Getting in touch is not a problem."
               icon="fa-solid:clipboard-list"
+              draft={false}
             />
             <Service
               name="Telegram, Twitter, Discord Manager"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+              text="We provide you best telegram and discord community managers, if you are looking for a manager who has more than 2 years of experience, contact below"
               icon="fluent-mdl2:functional-manager-dashboard"
+              draft={false}
+            />
+            <Service
+              name="CMC Listing"
+              text="We will help you to list your token in CMC ( CoinMarketCap), for more details about it please contact our community admin"
+              icon="fa6-solid:clipboard-list"
+              draft={false}
+            />
+            <Service
+              name="Telegram Bot Development"
+              text="Our experts can make telegram bots, We can make your project official bot, Airdrop bot, etc All."
+              icon="bx:bot"
+              draft={false}
+            />
+            <Service
+              name="YouTube Promotion"
+              text="We currently Have 9 YouTube Channels. Detailed Project Introduction Video on active YT Channel by our Influencers."
+              icon="mdi:youtube"
+              draft={false}
             />
             <Service
               name="Crypto Website Development"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
               icon="gg:website"
-            />
-            <Service
-              name="CMC Listing"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
-              icon="fa6-solid:clipboard-list"
-            />
-            <Service
-              name="Telegram Bot Development"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
-              icon="bx:bot"
+              draft={true}
             />
           </div>
         </div>

@@ -5,9 +5,9 @@ const Footer = () => {
     <>
       <footer class="flex justify-center bg-white px-4 text-gray-800 dark:bg-gray-900 dark:text-white">
         <div class="container py-6">
-          <h1 class="text-center text-lg font-bold lg:text-2xl">
-            Join 31,000+ other and never miss <br />
-            out on new tips, tutorials, and more.
+          <h1 class="mx-auto max-w-sm text-center text-lg font-bold lg:text-2xl">
+            Join our 60k+ Communty, Add your gmail and stay updated with our
+            next AMAs.
           </h1>
 
           <div class="mt-6 flex justify-center">
