@@ -5,16 +5,16 @@ const Question = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <details class="rounded-lg border-2 border-gray-100 dark:border-gray-700">
+      <details className="rounded-lg border-2 border-gray-100 dark:border-gray-700">
         <summary
-          class="flex w-full cursor-pointer items-center justify-between gap-2 p-8 font-semibold text-gray-700 dark:text-white"
+          className="flex w-full cursor-pointer items-center justify-between gap-2 p-8 font-semibold text-gray-700 dark:text-white"
           onClick={() => {
             setIsOpen(!isOpen);
           }}
         >
           {props.question}
           <span
-            class={`rounded-full p-0.5 ${
+            className={`rounded-full p-0.5 ${
               isOpen ? "bg-gray-200 text-gray-400" : "bg-blue-500 text-white"
             } `}
           >
@@ -25,7 +25,7 @@ const Question = (props) => {
             )}
           </span>
         </summary>
-        <hr class="border-gray-200 dark:border-gray-700" />
+        <hr className="border-gray-200 dark:border-gray-700" />
 
         {props.answer}
       </details>
@@ -36,17 +36,17 @@ const Question = (props) => {
 const Faq = () => {
   return (
     <>
-      <section class="bg-white dark:bg-gray-900">
-        <div class="container mx-auto max-w-4xl px-6 py-10">
-          <h1 class="text-center text-4xl font-semibold text-gray-800 dark:text-white">
+      <section className="bg-white dark:bg-gray-900">
+        <div className="container mx-auto max-w-4xl px-6 py-10">
+          <h1 className="text-center text-4xl font-semibold text-gray-800 dark:text-white">
             Frequently asked questions
           </h1>
 
-          <div class="mt-12 space-y-8">
+          <div className="mt-12 space-y-8">
             <Question
               question="AMA"
               answer={
-                <p class="p-8 text-sm text-gray-500 dark:text-gray-300">
+                <p className="p-8 text-sm text-gray-500 dark:text-gray-300">
                   AMA also known as Ask Me Anything sessions increase awareness
                   of products of projects.
                   <br />
@@ -61,7 +61,7 @@ const Faq = () => {
             <Question
               question="Twitter Promotion"
               answer={
-                <p class="p-8 text-sm text-gray-500 dark:text-gray-300">
+                <p className="p-8 text-sm text-gray-500 dark:text-gray-300">
                   Twitter is the hub of Crypto and promotions there are
                   mandatory for projects to boost their progress.
                   <br />
@@ -77,7 +77,7 @@ const Faq = () => {
             <Question
               question="Telegram Promotions"
               answer={
-                <p class="p-8 text-sm text-gray-500 dark:text-gray-300">
+                <p className="p-8 text-sm text-gray-500 dark:text-gray-300">
                   Telegram promotions are done in a systematic way to cover good
                   audiences. We do pin Project's informative posts in our
                   telegram community with thousands of viewers who join the
@@ -92,7 +92,7 @@ const Faq = () => {
             <Question
               question="How do you run AMA?"
               answer={
-                <p class="p-8 text-sm  text-gray-500 dark:text-gray-300">
+                <p className="p-8 text-sm  text-gray-500 dark:text-gray-300">
                   AMA contains three segments
                   <br />
                   1st segment: 5 questions from Host questions <br />

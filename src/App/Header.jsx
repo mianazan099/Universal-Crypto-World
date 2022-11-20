@@ -1,18 +1,37 @@
 import { useState } from "react";
-import { logo } from "../../assets";
+import { logo } from "../assets";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
-const NavLink = (props) => {
+const NavLink = ({ link, linkType, icon, text, setIsOpen }) => {
   return (
-    <a
-      href={props.link}
-      target="_blank"
-      rel="noreferrer"
-      className="flex transform items-center gap-2 text-gray-700 transition-colors duration-300  hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 lg:mx-8"
-    >
-      {props.icon}
-      {props.text}
-    </a>
+    <>
+      {linkType === "outer" ? (
+        <a
+          onClick={() => {
+            setIsOpen(false);
+          }}
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          className="flex transform items-center gap-2 text-gray-700 transition-colors duration-300  hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 lg:mx-8"
+        >
+          {icon}
+          {text}
+        </a>
+      ) : (
+        <Link
+          onClick={() => {
+            setIsOpen(false);
+          }}
+          to={link}
+          className="flex transform items-center gap-2 text-gray-700 transition-colors duration-300  hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 lg:mx-8"
+        >
+          {icon}
+          {text}
+        </Link>
+      )}
+    </>
   );
 };
 
@@ -24,13 +43,16 @@ const Hero = () => {
         <nav className="container mx-auto p-6 lg:flex lg:items-center lg:justify-between ">
           <div className="flex items-center justify-between">
             <div>
-              <a
+              <Link
                 className="flex items-center gap-2 text-2xl font-bold text-gray-800 hover:text-gray-700 dark:text-white dark:hover:text-gray-300 lg:text-3xl"
-                href="/"
+                to="/"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
               >
                 <img className="h-10 w-10" src={logo} alt="" />
                 <p>Universal Crypto world</p>
-              </a>
+              </Link>
             </div>
             <div className="flex lg:hidden">
               <button
@@ -58,12 +80,23 @@ const Hero = () => {
           >
             <div className="lg:-px-8 flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:space-y-0">
               <NavLink
+                setIsOpen={setIsOpen}
+                link="/blog"
+                linkType="inner"
+                icon={<Icon icon="mdi:blog-outline" width="24px" />}
+                text="Blog"
+              />
+              <NavLink
+                setIsOpen={setIsOpen}
                 link="https://t.me/UniversalcryptoworldAMA"
+                linkType="outer"
                 icon={<Icon icon="bxl:telegram" width="24px" />}
                 text="Join Us"
               />
               <NavLink
+                setIsOpen={setIsOpen}
                 link="http://twitter.com/UniCrypto_World"
+                linkType="outer"
                 icon={<Icon icon="bxl:twitter" width="24px" />}
                 text="Follow Us"
               />

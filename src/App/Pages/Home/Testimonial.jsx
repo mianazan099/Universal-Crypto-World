@@ -1,25 +1,24 @@
-import "../../assets";
-import { reviewer1, reviewer2, reviewer3 } from "../../assets";
+import { reviewer1, reviewer2, reviewer3 } from "../../../assets";
 
 const Review = (props) => {
   return (
-    <div class="rounded-lg border p-8 dark:border-gray-700">
-      <p class="leading-loose text-gray-500 dark:text-gray-400">
+    <div className="rounded-lg border p-8 dark:border-gray-700">
+      <p className="leading-loose text-gray-500 dark:text-gray-400">
         {props.review}
       </p>
 
-      <div class="-mx-2 mt-8 flex items-center">
+      <div className="-mx-2 mt-8 flex items-center">
         <img
-          class="mx-2 h-14 w-14 shrink-0 rounded-full object-cover ring-4 ring-gray-300 dark:ring-gray-700"
+          className="mx-2 h-14 w-14 shrink-0 rounded-full object-cover ring-4 ring-gray-300 dark:ring-gray-700"
           src={props.img}
           alt=""
         />
 
-        <div class="mx-2">
-          <h1 class="font-semibold text-gray-800 dark:text-white">
+        <div className="mx-2">
+          <h1 className="font-semibold text-gray-800 dark:text-white">
             {props.name}
           </h1>
-          <span class="text-sm text-gray-500">{props.role}</span>
+          <span className="text-sm text-gray-500">{props.role}</span>
         </div>
       </div>
     </div>
@@ -29,18 +28,18 @@ const Review = (props) => {
 const Testimonial = () => {
   return (
     <>
-      <section class="bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-6 py-10">
-          <h1 class="text-center text-3xl font-semibold capitalize text-gray-800 dark:text-white lg:text-4xl xl:text-5xl">
+      <section className="bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-6 py-10">
+          <h1 className="text-center text-3xl font-semibold capitalize text-gray-800 dark:text-white lg:text-4xl xl:text-5xl">
             What our clients say
           </h1>
 
-          <p class="mx-auto mt-6 max-w-2xl text-center text-gray-500 dark:text-gray-300">
+          <p className="mx-auto mt-6 max-w-2xl text-center text-gray-500 dark:text-gray-300">
             Our Customers love to work with us and appreciate our efforts at the
             end.
           </p>
 
-          <section class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:mt-12 xl:grid-cols-3">
+          <section className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:mt-12 xl:grid-cols-3">
             <Review
               name="Hugo Borges de Sousa"
               role="CEO - Dark Earth"
