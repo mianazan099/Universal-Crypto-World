@@ -51,7 +51,7 @@ const Hero = () => {
                 }}
               >
                 <img className="h-10 w-10" src={logo} alt="" />
-                <p>Universal Crypto world</p>
+                <p>Universal Crypto World</p>
               </Link>
             </div>
             <div className="flex lg:hidden">
