@@ -1,6 +1,6 @@
-- [ ] Setup React Router
-- [ ] Create blog page
-- [ ] call the api and get data
-- [ ] display data in blog page
-- [ ] blog card on click open blog
-- [ ] Style the blog post page
+- [ ] Social Meta Data
+- [ ] Favicon
+- [ ] Make the website Live
+- [ ] add keyword Meta data
+- [ ] Make the Email form Working
+- [ ] Pricing Section
