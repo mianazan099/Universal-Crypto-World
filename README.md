@@ -1,6 +1,5 @@
 - [ ] Social Meta Data
-- [ ] Favicon
+- [X] Favicon
 - [ ] Make the website Live
-- [ ] add keyword Meta data
 - [ ] Make the Email form Working
 - [ ] Pricing Section
