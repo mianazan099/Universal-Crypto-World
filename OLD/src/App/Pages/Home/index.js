@@ -1,4 +1,4 @@
-// import Header from "../../Header";
+// import Pricing from "./Pricing";
 import Hero from "./Hero";
 import Stats from "./Stats";
 import Services from "./Services";
@@ -10,10 +10,10 @@ import Footer from "./Footer";
 const Home = () => {
   return (
     <>
-      {/* <Header /> */}
       <Hero />
       <Stats />
       <Services />
+      {/* <Pricing /> */}
       <Team />
       <Testimonial />
       <Faq />

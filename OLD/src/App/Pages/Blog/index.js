@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const query = gql`
   {
-    blogPosts {
+    blogPosts(orderBy: createdAt_DESC) {
       title
       description
       category

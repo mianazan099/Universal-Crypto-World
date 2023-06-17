@@ -1,6 +1,17 @@
+import { useState } from "react";
 import { logo } from "../../../assets";
 
+function submitMail(mail) {
+  const API = `https://universalcryptoworld.us13.list-manage.com/subscribe/post?u=94a07d43b2bc6778b61d09e4a&amp;id=0c1f329edb&amp;f_id=00668ce2f0&EMAIL=${mail}`;
+  fetch(API, {
+    method: "POST",
+  }).then((res) => {
+    console.log(res);
+  });
+}
+
 const Footer = () => {
+  const [mail, setMail] = useState("");
   return (
     <>
       <footer className="flex justify-center bg-white px-4 text-gray-800 dark:bg-gray-900 dark:text-white">
@@ -12,9 +23,19 @@ const Footer = () => {
 
           <div className="mt-6 flex justify-center">
             <div className="rounded-md border bg-white focus-within:border-blue-400 dark:border-gray-700 dark:bg-gray-900 dark:focus-within:border-blue-300">
-              <div className="flex flex-wrap justify-between md:flex-row">
+              <form
+                className="flex flex-wrap justify-between md:flex-row"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  submitMail(mail);
+                }}
+              >
                 <input
                   type="email"
+                  value={mail}
+                  onInput={(e) => {
+                    setMail(e.target.value);
+                  }}
                   className="m-1 appearance-none bg-transparent p-2 text-sm text-gray-700 focus:placeholder-transparent focus:outline-none dark:text-gray-200"
                   placeholder="Enter your email"
                   aria-label="Enter your email"
@@ -22,7 +43,7 @@ const Footer = () => {
                 <button className="m-1 w-full transform rounded-md bg-gray-800 px-3 py-2 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600 lg:w-auto">
                   subscribe
                 </button>
-              </div>
+              </form>
             </div>
           </div>
 
