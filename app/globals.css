@@ -44,3 +44,68 @@
 .text-h2 {
   @apply text-xl font-bold leading-8 sm:text-3xl sm:leading-[45px];
 }
+
+.gradient-text {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.solution-border-top,
+.solution-border-bottom {
+  position: relative;
+}
+
+.solution-border-top::before,
+.solution-border-top::after,
+.solution-border-bottom::before,
+.solution-border-bottom::after {
+  content: url(/angle.svg);
+}
+
+.solution-border-top::before {
+  @apply absolute -left-3 -top-3;
+}
+.solution-border-top::after {
+  @apply absolute -right-[10px] -top-4 rotate-90;
+}
+.solution-border-bottom::before {
+  @apply absolute -bottom-4 -left-[9px] rotate-[270deg];
+}
+.solution-border-bottom::after {
+  @apply absolute -bottom-[12px] -right-[12px] rotate-[180deg];
+}
+
+.default-bg {
+  background-image: url(/bg.svg);
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+.single-border {
+  @apply relative;
+}
+
+.single-border::before,
+.single-border::after {
+  content: url(/angle.svg);
+}
+
+.single-border::before {
+  @apply absolute -left-3 -top-3;
+}
+
+.single-border::after {
+  @apply absolute -bottom-3 -right-3 rotate-180;
+}
+
+.big-border {
+  border-image: linear-gradient(
+      180deg,
+      #f3782c 0%,
+      #c8286a 69.27%,
+      #832d70 100%
+    )
+    50 / 0 4px 4px 0 / 16px;
+}
+
+

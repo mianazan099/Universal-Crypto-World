@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${bai_Jamjuree.className} mx-auto max-w-[min(100%-4rem,76rem)] overflow-x-hidden bg-dark-one text-center text-white lg:text-start`}
+        className={`${bai_Jamjuree.className} default-bg mx-auto max-w-[min(100%-4rem,76rem)] overflow-x-hidden bg-dark-one text-center text-white lg:text-start`}
       >
         {children}
       </body>
