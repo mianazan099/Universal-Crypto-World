@@ -1,2 +1,0 @@
-- [ ] Make the Email form Working
-- [ ] Pricing Section

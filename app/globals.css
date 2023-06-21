@@ -2,26 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.custom-border {
+  @apply skew-x-[4deg];
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.custom-border::before {
+  --border-gap: -24px;
+  content: "";
+  background-image: url(/border.svg);
+  width: 22%;
+  max-width: 156px;
+  left: max(-3.25vw, var(--border-gap));
+  top: max(-3.25vw, var(--border-gap));
+  @apply absolute aspect-square -skew-x-[4deg] bg-cover bg-no-repeat;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.custom-border::after {
+  --border-gap: -24px;
+  content: "";
+  background-image: url(/border.svg);
+  width: 22%;
+  max-width: 156px;
+  right: max(-3.25vw, var(--border-gap));
+  bottom: max(-3.25vw, var(--border-gap));
+  @apply absolute aspect-square rotate-180 -skew-x-[4deg] bg-cover bg-no-repeat;
+}
+
+.custom-border > div {
+  @apply -skew-x-[4deg];
+}
+
+.review.custom-border::before,
+.review.custom-border::after {
+  --border-gap: -12px;
+  max-width: 76px;
+}
+
+.text-h1 {
+  @apply text-xl font-bold leading-8 sm:text-4xl sm:leading-[52.5px];
+}
+.text-h2 {
+  @apply text-xl font-bold leading-8 sm:text-3xl sm:leading-[45px];
 }
