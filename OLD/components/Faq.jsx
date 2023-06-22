@@ -31,7 +31,7 @@ function Faq() {
         <Item title="Telegram Promotions">
           Telegram promotions are done in a systematic way to cover good
           audiences. We do pin Project's informative posts in our telegram
-          community with thousands of viewers who join the project’s telegram
+          community with thousands of viewers who join the project's telegram
           and engage there.
           <br />
           <br />
