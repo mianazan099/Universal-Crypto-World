@@ -1,21 +1,19 @@
-import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Page/Home";
 import AboutUs from "./Page/AboutUs";
 import AMAReview from "./Page/AMAReview";
 import Partners from "./Page/Partners";
 import SuccessStories from "./Page/SuccessStories";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about-us">About Us</Link>
-        <Link to="/ama-review">AMA Review</Link>
-        <Link to="/partners">Partners</Link>
-        <Link to="/success-stories">Success Stories</Link>
-      </nav>
+    <div className={`h-[100vmin] ${open ? "overflow-hidden" : ""}`}>
+      <Header open={open} setOpen={setOpen} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -23,7 +21,8 @@ function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="/success-stories" element={<SuccessStories />} />
       </Routes>
-    </>
+      <Footer />
+    </div>
   );
 }
 
