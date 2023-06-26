@@ -12,7 +12,7 @@ function App() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className={`h-[100vmin] ${open ? "overflow-hidden" : ""}`}>
+    <div className={`h-[100vmin] font-serif ${open ? "overflow-hidden" : ""}`}>
       <Header open={open} setOpen={setOpen} />
       <Routes>
         <Route path="/" element={<Home />} />

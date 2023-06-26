@@ -4,13 +4,17 @@ function TopAnnouncement() {
       <h2 className="mb-8 text-center text-xl font-bold sm:text-4xl">
         Top Announcement
       </h2>
-      <div className="mx-auto max-w-3xl sm:grid sm:grid-cols-3 sm:gap-5">
-        <div className="mx-auto mb-8 h-48 w-full max-w-xs rounded-lg bg-[#c9c9c9] sm:mb-0 lg:h-52"></div>
-        <div className="text-start sm:col-span-2">
-          <p className="mb-5 text-lg font-bold leading-[25px]">
-            Weekly AMA Hosting:
-          </p>
-          <p className="text-md leading-[22.5px]">
+      <div className="mx-auto flex w-fit max-w-[39ch] flex-col gap-5 sm:max-w-none sm:flex-row">
+        <div className="">
+          <img
+            src="https://fakeimg.pl/700x700/"
+            alt=""
+            className="h-48 w-full rounded-lg object-cover sm:aspect-[1/.75] sm:h-52"
+          />
+        </div>
+        <div className="text-start">
+          <p className="mb-5 text-lg font-bold">Weekly AMA Hosting:</p>
+          <p className="max-w-[39ch] text-md">
             Through these AMAs, we want to help our community members grow and
             learn. Every week or every two weeks we will have one of these to
             share valuable and insightful advice that members of our community

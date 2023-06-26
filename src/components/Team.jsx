@@ -1,7 +1,7 @@
 function Team() {
   return (
     <section className="mx-auto mb-24 max-w-3xl text-center">
-      <div className="mx-auto mb-8 max-w-[62ch]">
+      <div className="mx-auto mb-8 max-w-[52ch]">
         <h2 className="mb-5 text-xl font-bold sm:text-3xl">
           Our Execution Team
         </h2>

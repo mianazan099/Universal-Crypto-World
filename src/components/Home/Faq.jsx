@@ -86,7 +86,7 @@ const Item = ({ title, children }) => {
         type="button"
         aria-label="Open item"
         title="Open item"
-        className="flex w-full items-center justify-between px-8 py-5 focus:outline-none"
+        className="flex w-full items-center justify-between gap-2 px-8 py-5 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         <p className="text-start font-bold sm:text-md">{title}</p>

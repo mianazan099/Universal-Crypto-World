@@ -1,11 +1,14 @@
-import SuccessHero from "../old-components/SuccessHero";
-import FeatureProject from "../old-components/FeatureProject";
+import Hero from "../components/Hero";
+import FeatureProject from "../components/Success/FeatureProject";
 import Testimonial from "../components/Testimonial";
 
 function SuccessStories() {
   return (
     <>
-      <SuccessHero />
+      <Hero
+        heading="Success Stories"
+        subHeading="We list some of the most innovative and upcoming crypto projects here are a few:"
+      />
       <FeatureProject />
       <Testimonial />
     </>

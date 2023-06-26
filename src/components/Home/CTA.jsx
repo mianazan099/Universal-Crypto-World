@@ -1,7 +1,7 @@
 function CTA() {
   return (
     <section className="skew-border mx-auto mb-24 max-w-[732px] rounded-lg bg-darkPurple-400 px-6 py-8 text-center sm:mb-32 sm:px-12 sm:py-16 sm:max-[840px]:mx-10">
-      <div className="mx-auto max-w-[62ch]">
+      <div className="mx-auto max-w-[52ch]">
         <h2 className="mb-5 text-md font-bold sm:text-3xl">
           Want To Host Your Project ON Universal Crypto World?
         </h2>

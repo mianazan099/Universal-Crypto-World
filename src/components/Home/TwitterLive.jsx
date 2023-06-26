@@ -16,7 +16,7 @@ function TwitterLive() {
           </a>
         </div>
       </div>
-      <div className="mx-auto max-w-[62ch] lg:mx-0 lg:ml-auto">
+      <div className="mx-auto max-w-[52ch] lg:mx-0 lg:ml-auto">
         <h2 className="mb-5 text-xl font-bold sm:text-4xl">
           Be Part of Something Massive
         </h2>

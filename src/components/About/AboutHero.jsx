@@ -1,7 +1,7 @@
 function AboutHero() {
   return (
     <section className="about-bg mb-24 pt-4 text-center lg:pb-24">
-      <div className="mx-auto max-w-[62ch]">
+      <div className="mx-auto max-w-[52ch]">
         <h1 className="mb-5 text-xl font-bold sm:text-4xl">
           Universal Crypto World
         </h1>

@@ -30,8 +30,7 @@ function AboutTeam() {
       <h2 className="mb-8 text-center text-xl font-bold sm:text-4xl">
         Hear From The Team
       </h2>
-      <div className="team-border-sm mx-auto grid max-w-[400px] gap-5 sm:gap-16 md:max-w-none md:grid-cols-2">
-        <div className="my-border"></div>
+      <div className="team-border-sm mx-auto grid max-w-[400px] gap-5 sm:gap-8 md:max-w-none md:grid-cols-2">
         <div className="mb:col-start-2">
           <p className="text-start text-md">
             I started Universal Crypto World to solve the problems of the
@@ -49,7 +48,7 @@ function AboutTeam() {
               alt=""
               className="h-full object-cover"
             />
-            <div className="absolute bottom-8 left-1/2 w-max -translate-x-1/2">
+            <div className="absolute bottom-8 left-1/2 w-max -translate-x-1/2 text-center">
               <p className="text-lg font-bold">{data[member].name}</p>
               <p className="text-sm">{data[member].role}</p>
             </div>

@@ -10,7 +10,7 @@ function Stat({ name, number }) {
 function Stats() {
   return (
     <section className="mb-24 sm:mb-32 lg:mx-auto lg:flex lg:max-w-5xl lg:items-center lg:justify-between">
-      <div className="mx-auto mb-8 max-w-[62ch] lg:mx-0 lg:mb-0">
+      <div className="mx-auto mb-8 max-w-[52ch] lg:mx-0 lg:mb-0">
         <h2 className="mb-5 text-xl font-bold sm:text-3xl">
           Universal Crypto World Stats
         </h2>
