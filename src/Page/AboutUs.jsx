@@ -1,6 +1,6 @@
-import AboutHero from "../old-components/AboutHero";
-import Solutions from "../old-components/Solutions";
-import AboutTeam from "../old-components/AboutTeam";
+import AboutHero from "../components/About/AboutHero";
+import Solutions from "../components/About/Solutions";
+import AboutTeam from "../components/About/AboutTeam";
 import Team from "../components/Team";
 
 function AboutUs() {

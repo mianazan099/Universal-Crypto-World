@@ -5,11 +5,9 @@
 @tailwind utilities;
 
 body {
-  background-image: url(/bg.svg);
   background-repeat: repeat-y;
-  background-size: cover;
   background-position: center;
-  @apply mx-auto max-w-[min(100%-4rem,76rem)] overflow-x-hidden bg-darkPurple-900 text-center text-white lg:text-start;
+  @apply mx-auto max-w-[min(100%-4rem,76rem)] overflow-x-hidden bg-darkPurple-900 bg-[url(/mobile-bg.svg)] text-center text-white sm:bg-[url(/desktop-bg.svg)] lg:text-start;
 }
 
 .skew-border {
@@ -51,25 +49,78 @@ body {
   @apply -bottom-[10px] -right-[12px] w-16;
 }
 
-/* 
-.review.custom-border::before,
-.review.custom-border::after {
-  -24px: -12px;
-  max-width: 76px;
-}
-
-.text-h1 {
-  @apply text-xl font-bold leading-8 sm:text-4xl sm:leading-[52.5px];
-}
-.text-xl font-bold sm:text-4xl {
-  @apply text-xl font-bold leading-8 sm:text-3xl sm:leading-[45px];
+.about-bg {
+  @apply bg-contain bg-center bg-no-repeat sm:bg-[url(/planet.png)];
 }
 
 .gradient-text {
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.full-border {
+  position: relative;
+}
+
+.full-border > .tl,
+.full-border > .tr,
+.full-border > .bl,
+.full-border > .br {
+  @apply absolute aspect-square h-[76px] bg-cover bg-center bg-no-repeat;
+}
+
+.full-border > .tl {
+  background-image: url(/border-tl.svg);
+  left: -12px;
+  top: -12px;
+}
+
+.full-border > .tr {
+  background-image: url(/border-tr.svg);
+  right: -12px;
+  top: -12px;
+}
+
+.full-border > .br {
+  background-image: url(/border-br.svg);
+  right: -12px;
+  bottom: -12px;
+}
+
+.full-border > .bl {
+  background-image: url(/border-bl.svg);
+  left: -12px;
+  bottom: -12px;
+}
+
+.team-border-sm,
+.team-border-md {
+  /* position: relative; */
+}
+
+.team-border-sm > .my-border {
+  position: absolute;
+  /* 
+  background-image: url(/team-border-sm.svg);
+  height: calc(100% - 120px);
+  width: calc(100%);
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* border-image: linear-gradient(
+      180deg,
+      #f3782c 0%,
+      #c8286a 69.27%,
+      #832d70 100%
+    )
+    50 / 0 4px 4px 0 / 2px;
+  height: 200px; */
+}
+
+/* 
 .solution-border-top,
 .solution-border-bottom {
   position: relative;
